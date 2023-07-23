@@ -28,7 +28,7 @@ export default function Products() {
                                 Edit
                             </Link>
                             <Link href={'/products/delete/' +product._id}>
-                                Edit 
+                                Delete 
                             </Link>
                         </td>
                     </tr>
