@@ -1,0 +1,108 @@
+.flex {
+    display: flex;
+}
+
+/* Flex Container with Direction */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Flex Items Alignment */
+.flex-items-center {
+    align-items: center;
+}
+
+.flex-items-start {
+    align-items: flex-start;
+}
+
+.flex-items-end {
+    align-items: flex-end;
+}
+
+.flex-items-stretch {
+    align-items: stretch;
+}
+
+/* Flex Content Alignment */
+.flex-content-center {
+    justify-content: center;
+}
+
+.flex-content-start {
+    justify-content: flex-start;
+}
+
+.flex-content-end {
+    justify-content: flex-end;
+}
+
+.flex-content-between {
+    justify-content: space-between;
+}
+
+.flex-content-around {
+    justify-content: space-around;
+}
+
+/* Flex Item Grow and Shrink */
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+/* Flex Item Alignment */
+.flex-self-auto {
+    align-self: auto;
+}
+
+.flex-self-start {
+    align-self: flex-start;
+}
+
+.flex-self-end {
+    align-self: flex-end;
+}
+
+.flex-self-center {
+    align-self: center;
+}
+
+/* Flex Wrap */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+// Define mixin for flex gap utility
+@mixin flex-gap($value) {
+    gap: $value * 1rem;
+}
+
+// Define a list of flex gap values you want to create utility classes for
+$flex-gap-values: (
+    0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 2,
+    // Add more values as needed...
+);
+
+// Loop through the values and generate utility classes
+@each $type, $value in $flex-gap-values {
+    .fg#{$type} {
+        @include flex-gap($value);
+    }
+}

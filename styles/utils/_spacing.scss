@@ -1,0 +1,49 @@
+// Define mixin for padding and margin utility
+@mixin padding-margin($property, $value) {
+    #{$property}: $value * 1rem;
+}
+
+// Define a list of padding and margin values you want to create utility classes for
+$padding-margin-values: (
+    0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 2,
+    // Add more values as needed...
+);
+
+// Loop through the values and generate utility classes
+@each $type, $value in $padding-margin-values {
+    .p#{$type} {
+        @include padding-margin(padding, $value);
+    }
+    .m#{$type} {
+        @include padding-margin(margin, $value);
+    }
+    .pt#{$type} {
+        @include padding-margin(padding-top, $value);
+    }
+    .pb#{$type} {
+        @include padding-margin(padding-bottom, $value);
+    }
+    .pr#{$type} {
+        @include padding-margin(padding-right, $value);
+    }
+    .pl#{$type} {
+        @include padding-margin(padding-left, $value);
+    }
+    .mt#{$type} {
+        @include padding-margin(margin-top, $value);
+    }
+    .mb#{$type} {
+        @include padding-margin(margin-bottom, $value);
+    }
+    .mr#{$type} {
+        @include padding-margin(margin-right, $value);
+    }
+    .ml#{$type} {
+        @include padding-margin(margin-left, $value);
+    }
+}

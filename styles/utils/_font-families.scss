@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+
+$ff-text: "Open Sans", sans-serif;
+$ff-heading: "Roboto", sans-serif;
+$ff-accent: "Yellowtail", cursive;
+
+.ff-text {
+    font-family: $ff-text;
+}
+
+.ff-heading {
+    font-family: $ff-heading;
+}
+
+.ff-accent {
+    font-family: $ff-accent;
+}

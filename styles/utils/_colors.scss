@@ -1,0 +1,22 @@
+$primary: #274c5b;
+
+$colors: (
+    primary: #274c5b,
+    secondary: #525c60,
+    accent-700: #efd372,
+    accent-400: #7eb693,
+    neutral-100: #ffffff,
+    neutral-300: #f9f8f8,
+    neutral-400: #eff6f1,
+    neutral-700: #d4d4d4,
+);
+
+@each $color, $value in $colors {
+    .text-#{$color} {
+        color: $value;
+    }
+
+    .bg-#{$color} {
+        background-color: $value;
+    }
+}
