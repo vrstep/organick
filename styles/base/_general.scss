@@ -8,6 +8,10 @@ body {
     // color: $color-text;
 }
 
+a {
+    text-decoration: none;
+}
+
 .heroicon {
     height: 24px;
 }
@@ -52,5 +56,11 @@ table.basic {
     tr td {
         border: 1px solid #ddd;
         padding: 0.5rem;
+    }
+
+    a {
+        background-color: #efd372;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.45rem;
     }
 }

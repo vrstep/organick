@@ -12,7 +12,7 @@ export default function Products() {
     }, []);
     return <Layout>
         <Link href={'/products/new'}>Add new product</Link>
-        <table className="basic">
+        <table className="basic mt2">
             <thead>
                 <tr>
                     <td>Product name</td>
@@ -24,7 +24,12 @@ export default function Products() {
                     <tr>
                         <td>{product.title}</td>
                         <td>
-                            buttons
+                            <Link href={'/products/edit/' +product._id}>
+                                Edit
+                            </Link>
+                            <Link href={'/products/delete/' +product._id}>
+                                Edit 
+                            </Link>
                         </td>
                     </tr>
                 ))}
