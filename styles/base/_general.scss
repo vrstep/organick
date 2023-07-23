@@ -35,3 +35,22 @@ label {
     padding: 0.5rem 1.5rem;
     border-radius: 0.45rem;
 }
+
+table.basic {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #ddd;
+    padding: 0.5rem;
+
+
+    thead {
+        background-color: #ddd;
+        color: #274c5b;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    tr td {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+    }
+}
