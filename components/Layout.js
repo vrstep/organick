@@ -8,7 +8,7 @@ export default function Layout({children}) {
         return (
             <div>
                 <button onClick={() => signIn("google")}>
-                    Fuck you Google
+                    Sign in with Google
                 </button>
             </div>
         );
